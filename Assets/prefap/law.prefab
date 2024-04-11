@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6386963737279464787}
   - component: {fileID: 3711708099695306817}
   - component: {fileID: -2355811015302664530}
+  - component: {fileID: 6137959850880172967}
   m_Layer: 0
   m_Name: law
   m_TagString: circle
@@ -161,3 +162,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.6875}
   serializedVersion: 2
   m_Radius: 0.6875
+--- !u!114 &6137959850880172967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113171940466585432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be762ac09a29e8d4993c5c4983e1c4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeed: 1.5
+  offset: {x: 0, y: 0, z: 0}
+  followDistance: 12

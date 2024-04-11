@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class bulletController : MonoBehaviour
 {
+    public GameObject bulletPrefrab;
+    public float fireRate = 1f;
+    private float fireTimer;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-    }
-     void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("circle") || collision.gameObject.CompareTag("map"))
+        fireTimer += Time.deltaTime;
+
+        if (fireTimer >= 1f / fireRate)
         {
-            Destroy(gameObject);
+            Instantiate(bulletPrefrab, gameObject.transform.position, Quaternion.identity);
+            fireTimer = 0f;
         }
     }
 }
+    

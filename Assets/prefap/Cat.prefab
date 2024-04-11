@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 4058121043933847354}
   - component: {fileID: 289343180854147108}
   - component: {fileID: -4257416355203805916}
-  m_Layer: 0
+  - component: {fileID: -6151596901083734860}
+  - component: {fileID: 5435897936201411338}
+  m_Layer: 3
   m_Name: Cat
   m_TagString: square
   m_Icon: {fileID: 0}
@@ -130,9 +132,9 @@ MonoBehaviour:
   timeRemaining: 60
   countdowText: {fileID: 0}
   spawnPlace: {fileID: 0}
-  targetColor: {r: 0, g: 0, b: 0, a: 1}
   bulletprefab: {fileID: 3963626473630224916, guid: fe323a025f5d2ec4cacf7a70c3543daf, type: 3}
-  bulletspeed: 10
+  bulletspeed: 15
+  playerData: {fileID: 0}
 --- !u!61 &-4257416355203805916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,3 +180,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.125}
   m_EdgeRadius: 0
+--- !u!114 &-6151596901083734860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978052288998524996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8aa79183b0ed314bb72a7756662e8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefrab: {fileID: 3963626473630224916, guid: fe323a025f5d2ec4cacf7a70c3543daf, type: 3}
+  fireRate: 1
+--- !u!114 &5435897936201411338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978052288998524996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9461fe8aebb1db441afca910aa5216ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  gameOverCanvas: {fileID: 0}

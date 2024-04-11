@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7743647431708515002}
   - component: {fileID: 4382910096444387603}
   - component: {fileID: 653621674147439905}
+  - component: {fileID: 82877704086835929}
   m_Layer: 0
   m_Name: 'spuare '
   m_TagString: square
@@ -171,6 +172,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a50f35923c1dec41a47fe18b1cc0349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  movespeed: 5
   timeRemaining: 60
   countdowText: {fileID: 0}
+  spawnPlace: {fileID: 0}
+  bulletprefab: {fileID: 0}
+  bulletspeed: 10
+--- !u!114 &82877704086835929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3196787327259878162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9461fe8aebb1db441afca910aa5216ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}

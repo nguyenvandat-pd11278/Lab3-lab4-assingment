@@ -15,8 +15,9 @@ public class squarecontroller : MonoBehaviour
     public Text countdowText;
     public Transform spawnPlace;
     public GameObject bulletprefab;
-    public float bulletspeed = 10f;
+    public float bulletspeed = 15f;
     private Rigidbody2D rb;
+    public PlayerData playerData;
 
     private Vector2 shootDirection;
     void Start()
@@ -55,18 +56,16 @@ public class squarecontroller : MonoBehaviour
         {
             shootDirection = Vector2.down;
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Shoot();
-        }
-
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         transform.Translate(moveDirection * movespeed * Time.fixedDeltaTime);
 
     }
     public void LoadNextScene()
     {
+        //khi chuyen sang screen tiep theo thi tang 1 level 
+         playerData.playerLevel++;
+        PlayerPrefs.SetInt("PlayerLevel", playerData.playerLevel);
+        PlayerPrefs.SetInt("PlayerScore", playerData.playerScore);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
@@ -86,14 +85,6 @@ public class squarecontroller : MonoBehaviour
         {
             transform.position = spawnPlace.position;
         }
-    }
-    void Shoot()
-    {
-        GameObject newbullet = Instantiate(bulletprefab, transform.position, Quaternion.identity);
-        Rigidbody2D bulletRb = newbullet.GetComponent<Rigidbody2D>();
-        if (bulletRb != null)
-        {
-            bulletRb.velocity = shootDirection * bulletspeed;
-        }
+
     }
 }

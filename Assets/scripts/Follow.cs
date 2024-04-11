@@ -8,7 +8,7 @@ public class Follow : MonoBehaviour
     public float moveSpeed = 1.5f;
     public Vector3 offset = new Vector3(0f, 0f, 0f);
     private SpriteRenderer spriteRenderer;
-    public float followDistance = 20f;
+    public float followDistance = 12f;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

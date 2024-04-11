@@ -20,18 +20,6 @@ public class circlecontroller : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "map")
-        {
-            diretion *= -1;
-        }
-        else if (collision.gameObject.CompareTag("bullet"))
-        {
-            TakeDamage(100);
-        }
-            
-    }
     
     
     public void TakeDamage(int damageAmount)
